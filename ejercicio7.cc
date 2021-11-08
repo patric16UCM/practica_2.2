@@ -10,7 +10,7 @@ using namespace std;
 
 int main(int argc, char *argv[]){
 char *path= argv[1];
- int resultado =umask(0020);
+ int resultado =umask(0727);
  if(resultado == -1){
      perror("Se ha producido un error fijando la mascara.");
  }
