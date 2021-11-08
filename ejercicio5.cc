@@ -9,10 +9,10 @@
 using namespace std;
 
 int main(int argc, char *argv[]){
-char *path= argv[0];
+char *path= argv[1];
 mode_t modo;
- modo = umask(0645);
- int resultado = open(path,O_CREAT,modo);
+
+ int resultado = open(path,O_CREAT|O_TRUNC,0645);
 
  if(resultado == -1){
      perror("Se ha producido un error.");
